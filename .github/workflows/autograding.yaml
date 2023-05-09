@@ -20,8 +20,6 @@ jobs:
 
     - name: Compile and run Main.java
       run: |
-        javac src/Main.java
-        echo "Hello World!" > expected_output.txt
-        java src/Main.java > actual_output.txt
-        diff expected_output.txt actual_output.txt
-        cml-send-comment "Good Work"
+          python eval.py >> report.md
+          cml-send-comment report.md
+
