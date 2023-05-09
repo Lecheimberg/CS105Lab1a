@@ -20,9 +20,7 @@ jobs:
 
     - name: Compile and run Main.java
       run: |
-        mkdir bin
-        javac -d bin src/Main.java
-        java -cp bin Main
+        javac src/Main.java
         echo "Hello World!" > expected_output.txt
-        java Main > actual_output.txt
+        java src/Main.java > actual_output.txt
         diff expected_output.txt actual_output.txt
