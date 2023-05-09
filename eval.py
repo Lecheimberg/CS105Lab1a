@@ -6,10 +6,10 @@ def run_job(cmd):
 
 if __name__ == '__main__':
     # Compile
-    run_job("javac Main.java")
+    run_job("javac src/Main.java")
 
     # Run
-    msg = run_job("java Main").rstrip()
+    msg = run_job("java src/Main").rstrip()
     expected_output = "Hello World!"
     if msg == expected_output:
         print("Ok!")
