@@ -18,9 +18,9 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
 
-    - name: Compile and run HelloWorld.java
+    - name: Compile and run Main.java
       run: |
-        javac src/Main.java
+        javac Main.java
         echo "Hello World!" > expected_output.txt
         java Main > actual_output.txt
         diff expected_output.txt actual_output.txt
