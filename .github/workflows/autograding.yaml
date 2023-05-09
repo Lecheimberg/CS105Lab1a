@@ -21,6 +21,7 @@ jobs:
     - name: Compile and run Main.java
       run: |
         javac ../src/Main.java
+        java -cp src Main
         echo "Hello World!" > expected_output.txt
         java Main > actual_output.txt
         diff expected_output.txt actual_output.txt
